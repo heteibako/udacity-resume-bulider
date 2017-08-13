@@ -52,13 +52,7 @@ function displayBio() {
   formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
   formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
   $("#footerContacts").append(formattedContactInfo);
-
-
-  for (i in formattedContactInfo) {
-    $("#topContacts").append(formattedContactInfo[i]);
-
-  }
-
+  $("#topContacts").append(formattedContactInfo);
 };
 
 displayBio();
@@ -85,7 +79,7 @@ var work = {
       description: "Building websites for clients from Germany, Hungary and the USA"
     }
   ]
-};
+}
 
 function displayWork() {
 
@@ -131,7 +125,7 @@ var projects = {
       images: "images/emocean_yoga.jpg"
     }
   ]
-};
+}
 
 function displayProjects() {
 
@@ -150,7 +144,7 @@ function displayProjects() {
     $(".project-entry:last").append(formattedProjectDescription);
 
   }
-}
+};
 
 displayProjects();
 
@@ -193,7 +187,7 @@ var educations = {
       image: "images/udacity.png"
     }
   ]
-};
+}
 
 function displayEducations() {
   if (educations.schools.length > 0) {
@@ -213,7 +207,7 @@ function displayEducations() {
       $(".education-entry:last").append(formattedSchoolLocation);
       $(".education-entry:last").append(formattedMajor);
       $(".education-entry:last").append(formattedSchoolDates);
-      $(".education-entry:last").append(formattedOnlineImage);
+
 
     }
 
@@ -234,7 +228,6 @@ function displayEducations() {
         $(".education-entry:last").append(formattedOnlineDates);
         $(".education-entry:last").append(formattedOnlineUrl);
         $(".education-entry:last").append(formattedOnlineImage);
-
       }
     }
   }

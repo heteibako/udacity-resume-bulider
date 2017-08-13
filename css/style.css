@@ -131,9 +131,8 @@ a {
 
 #skills {
   order: 4;
-  width: 100%;
+  width: 35%;
   text-align: center;
-  
 }
 
 
@@ -299,8 +298,6 @@ a {
 .flex-box {
   display: -webkit-flex;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
 }
@@ -346,6 +343,9 @@ span {
 @media only screen and (max-width: 480px) {
   #lets-connect {
     margin-top: 0;
+  }
+  #topContacts {
+    display: block;
   }
   #header {
     height: 100vh;
@@ -413,6 +413,10 @@ span {
   .education-entry {
     max-width: 80%;
     margin-left: 5px;
+  }
+
+  #skills {
+    display: none;
   }
 }
 
