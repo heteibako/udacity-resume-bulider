@@ -23,7 +23,7 @@ var bio = {
     " SQL "
   ],
   biopic: "images/szabi.jpg"
-};
+}
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -36,15 +36,14 @@ $("#header").append(picture);
 $("#header").append(formattedWelcome);
 
 
-
 function displayBio() {
 
   if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
     for (var i = 0; i < bio.skills.length; i++) {
-      var formattedSkills = HTMLskills.replace('%data%', bio.skills);
+      var formattedSkills = HTMLskills.replace('%data%', bio.skills[i]);
+        $("#skills").append(formattedSkills);
     }
-    $("#skills").append(formattedSkills);
   }
 
   var formattedContactInfo = [];
@@ -52,14 +51,15 @@ function displayBio() {
   formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
   formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
   formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
-  formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
+  $("#footerContacts").append(formattedContactInfo);
 
-  for (var i = 0; i < formattedContactInfo; i++) {
+
+  for (i in formattedContactInfo) {
     $("#topContacts").append(formattedContactInfo[i]);
-    $("#footerContacts").append(formattedContactInfo[i]);
+
   }
 
-}
+};
 
 displayBio();
 
@@ -85,9 +85,10 @@ var work = {
       description: "Building websites for clients from Germany, Hungary and the USA"
     }
   ]
-}
+};
 
 function displayWork() {
+
   for (var i = 0; i < work.jobs.length; i++) {
     $("#workExperience").append(HTMLworkStart);
 
@@ -104,6 +105,7 @@ function displayWork() {
     $(".work-entry:last").append(formattedWorkDates);
     $(".work-entry:last").append(formattedWorkDescription);
   }
+
 }
 
 displayWork();
@@ -129,11 +131,11 @@ var projects = {
       images: "images/emocean_yoga.jpg"
     }
   ]
-}
+};
 
 function displayProjects() {
 
-  for(var i = 0; i < projects.projects.length; i++) {
+  for (var i = 0; i < projects.projects.length; i++) {
     $("#projects").append(HTMLprojectStart);
 
     var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projects.projects[i].title);
@@ -190,13 +192,11 @@ var educations = {
       url: "teamtreehouse.com/szabolcsheteibako2",
       image: "images/udacity.png"
     }
-
   ]
-
-}
+};
 
 function displayEducations() {
-  if(educations.schools.length > 0) {
+  if (educations.schools.length > 0) {
     $("#education").append(HTMLschoolStart);
     for (var i = 0; i < educations.schools.length; i++) {
 
@@ -214,6 +214,7 @@ function displayEducations() {
       $(".education-entry:last").append(formattedMajor);
       $(".education-entry:last").append(formattedSchoolDates);
       $(".education-entry:last").append(formattedOnlineImage);
+
     }
 
     if (educations.onlineCourses.length > 0) {
@@ -237,6 +238,6 @@ function displayEducations() {
       }
     }
   }
-}
+};
 
 displayEducations();
