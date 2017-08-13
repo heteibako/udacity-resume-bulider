@@ -4,11 +4,11 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<link href="css/style.css" rel="stylesheet">
+
 
 <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
@@ -24,18 +24,18 @@
     </div>
 
     <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
+      <h2 data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out-cubic" data-aos-duration="600">Work Experience</h2>
       <div class="row">
       </div>
     </div>
     <div id="projects">
-      <h2 class="project-title">Projects</h2>
+      <h2 class="project-title" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out-cubic" data-aos-duration="600">Projects</h2>
     </div>
     <div id="education" class="gray">
-      <h2>Education</h2>
+      <h2 data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out-cubic" data-aos-duration="600">Education</h2>
     </div>
     <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
+      <h2 data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-out-cubic" data-aos-duration="600">Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
       <h2 class="orange center-text">Let's Connect</h2>
@@ -46,13 +46,18 @@
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+  <script>
+  AOS.init({
+duration: 1200
+});
+  </script>
 
   <script src="js/helper.js"></script>
   <script src="js/resumeBuilder.js"></script>
 
 
-  <script>
+  <!-- <script>
     if (document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
@@ -74,7 +79,7 @@
     if (document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
     }
-  </script>
+  </script> -->
 </body>
 
 </html>

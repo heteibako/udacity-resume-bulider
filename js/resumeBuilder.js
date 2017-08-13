@@ -124,10 +124,12 @@ var projects = {
       description: "The purpose of our production office is to provide high quality, unique programs to our partners and viewers with the widest spectrum of culture." + "Among other things, our mission is to connect the motherland with the Hungarians across the border, including continental distances.",
       images: "images/nivot_open.jpg"
     }, {
-      title: "Andrea Bencsik",
+      title: "Emocean Yoga",
       dates: "2015",
-      description: "Johanna Zett was born in 1990 in Leipzig, already came in touch with the Musical genre at the age of 11." + "At the Steintor Varieté in Halle (Saale) she learned her first skills in tapdance and modern jazzdance, singing and acting." + "Besides she received piano and opera vocal lessons.",
-      images: "images/bencsik_lg.jpg"
+      description: "SUP (stand up paddle board) began its journey in Hawaii and spread all over the world." +
+      "During the past two years, it has also become popular in Hungary." +
+      "Yoga is an ancient Indian method, which can help us to keep our bodies in good condition, functioning in the right way and helping to prevent disease.",
+      images: "images/emocean_yoga.jpg"
     }
   ]
 }
@@ -157,8 +159,8 @@ var educations = {
   schools: [
     {
       name: "Bessenyei College",
-      location: "Nyiregyhaza",
-      degree: "ongoing",
+      location: "Nyiregyhaza - Hungary",
+      degree: " English literature",
       majors: "none",
       dates: "1998-2000",
       image: "images/besi.jpg"
