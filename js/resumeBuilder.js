@@ -23,7 +23,7 @@ var bio = {
     " SQL "
   ],
   biopic: "images/szabi.jpg"
-}
+};
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -53,7 +53,7 @@ function displayBio() {
   formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
   $("#footerContacts").append(formattedContactInfo);
   $("#topContacts").append(formattedContactInfo);
-};
+}
 
 displayBio();
 
@@ -79,7 +79,7 @@ var work = {
       description: "Building websites for clients from Germany, Hungary and the USA"
     }
   ]
-}
+};
 
 function displayWork() {
 
@@ -125,7 +125,7 @@ var projects = {
       images: "images/emocean_yoga.jpg"
     }
   ]
-}
+};
 
 function displayProjects() {
 
@@ -144,7 +144,7 @@ function displayProjects() {
     $(".project-entry:last").append(formattedProjectDescription);
 
   }
-};
+}
 
 displayProjects();
 
@@ -187,7 +187,7 @@ var educations = {
       image: "images/udacity.png"
     }
   ]
-}
+};
 
 function displayEducations() {
   if (educations.schools.length > 0) {
@@ -201,7 +201,7 @@ function displayEducations() {
       var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', educations.schools[i].degree);
       var formattedMajor = HTMLschoolMajor.replace('%data%', educations.schools[i].majors);
       var formattedSchoolDates = HTMLschoolDates.replace('%data%', educations.schools[i].dates);
-      var formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.schools[i].image);
+
 
       $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
       $(".education-entry:last").append(formattedSchoolLocation);
@@ -214,7 +214,7 @@ function displayEducations() {
     if (educations.onlineCourses.length > 0) {
       $("#education").append(HTMLonlineClasses);
       $("#education").append(HTMLschoolStartOnline);
-      for (var i = 0; i < educations.onlineCourses.length; i++) {
+      for (i = 0; i < educations.onlineCourses.length; i++) {
 
         $(".education-online").append(HTMLschoolContainerOnline);
 
@@ -231,6 +231,6 @@ function displayEducations() {
       }
     }
   }
-};
+}
 
 displayEducations();
