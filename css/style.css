@@ -1,0 +1,476 @@
+/* ----------------- B A S E   S T Y L E S ----------------- */
+
+body, div, ul, li, p, h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  color: #f5a623;
+  line-height: 48px;
+  display: inline;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #999;
+  line-height: 29px;
+  padding: 10px;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #000;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 17px;
+}
+
+h2, h3, h4, h5 {
+  padding: 10px 20px;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+
+a {
+  color: #1199c3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+
+/* ----------------- C O L O U R S ----------------- */
+
+.orange {
+  background-color: rgba(17, 153, 195, 1);
+  color: white;
+}
+
+.orange-text {
+  color: rgba(17, 153, 195, 1);
+}
+
+.white-text {
+  color: #fff;
+}
+
+.gray {
+  background-color: #F9F9F9;
+}
+
+.dark-gray {
+  background-color: #4a4a4a;
+}
+
+
+/* ----------------- H E A D E R ----------------- */
+
+#main {
+  max-width: 100%;
+  margin: 0;
+}
+
+#header {
+  background: linear-gradient(135deg, rgba(0, 75, 130, 0.7), rgba(200, 0, 100, 0.7)), url('../images/header2.jpg') no-repeat center bottom fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+#header img {
+  order: 1;
+}
+
+#name {
+  order: 2;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#topContacts {
+  order: 0;
+  margin-bottom: 10px;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #fff;
+  line-height: 28px;
+  order: 2;
+}
+
+.role {
+  order: 2;
+}
+
+#skills-h3 {
+  color: rgba(17, 153, 195, 1);
+  min-width: 300px;
+  text-align: center;
+  order: 4;
+}
+
+#skills {
+  order: 4;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* ----------------- P R O J E C T S ----------------- */
+
+#projects {
+  display: flex;
+  padding: 50px 30px;
+  background-color: white;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+.project-entry {
+  flex-basis: 25%;
+  border-bottom: 5px solid rgba(17, 153, 195, .8);
+  border-right: 1px solid rgba(0, 0, 0, .04);
+  border-left: 1px solid rgba(0, 0, 0, .04);
+  border-radius: 0 0 12px 12px;
+  transition: .3s;
+  position: relative;
+}
+
+.project-entry:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+  color: white;
+}
+
+.project-desc {
+  padding: 0 25px 20px 25px;
+  text-align: justify;
+  color: #666;
+}
+
+.project-entry-title {
+  margin: 20px 0 0 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.project-entry-title a {
+  text-decoration: none !important;
+}
+
+.project-date-text {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 45px;
+  background-color: rgba(17, 153, 195, 1);
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.project-entry img {
+  width: 100%;
+}
+
+
+/* ----------------- W O R K ----------------- */
+
+#workExperience {
+  display: flex;
+  padding: 50px 0;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.work-entry {
+  flex: 1;
+  padding: 0 20px;
+  text-align: justify;
+  height: 100%;
+}
+
+.work-entry>a {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+
+/* ----------------- E D U C A T I O N ----------------- */
+
+#education {
+  display: flex;
+  padding: 50px 0;
+}
+
+.education {
+  display: flex-column;
+  justify-content: center;
+  padding: 0 100px;
+}
+
+.education-entry {
+  padding: 20px 30px;
+  flex: 1;
+  background-color: white;
+  border-right: solid 1px #1199c3;
+  border-left: solid 3px #1199c3;
+  border-radius: 10px 0 0 10px;
+  margin: 20px 0;
+  position: relative;
+  height: 71px;
+  transition: .3s;
+}
+
+.education-entry:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+}
+
+.education-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.online-url {
+  font-size: 12px;
+}
+
+.onlineSchoolLogo {
+  width: 111px;
+  height: 111px;
+  position: absolute;
+  right: -112px;
+  top: 0;
+  transition: .3s;
+}
+
+.education-entry a {
+  text-decoration: none;
+}
+
+.school-date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+}
+
+.school-date-text {
+  margin-bottom: 15px;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+}
+
+
+/* TODO: Replace with image later */
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.biopic {
+  padding: 10px;
+  display: block;
+  border-radius: 300px;
+  border: 1px solid tomato;
+}
+
+
+/*img {
+  padding: 10px;
+}*/
+
+span {
+  padding: 5px;
+}
+
+#lets-connect {
+  text-align: center;
+}
+
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 480px) {
+  #lets-connect {
+    margin-top: 0;
+  }
+  #header {
+    height: 100vh;
+  }
+  .biopic {
+    width: 175px;
+    height: 175px;
+    display: block;
+    margin-top: 40px;
+  }
+  #name {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  .welcome-message {
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 30px;
+    color: #f3f3f3;
+    line-height: 28px;
+  }
+  #workExperience {
+    display: block;
+    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .work-entry {
+    max-width: 100%;
+    padding: 10px 10px;
+    text-align: justify;
+  }
+  #projects {
+    display: block;
+    padding: 30px 0;
+    max-width: 100%;
+  }
+  .project-entry {
+    margin: 30px auto;
+    max-width: 95%;
+    background-color: white;
+  }
+  .project-entry-title, .date-text {
+    margin-left: 25px;
+  }
+  .project-desc {
+    padding: 5px 25px 25px 25px;
+    margin-top: 5px;
+  }
+  #education {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .education {
+    display: block;
+    padding: 0;
+    max-width: 100%;
+  }
+  .onlineSchoolLogo {
+    display: none;
+  }
+  .education-entry {
+    max-width: 80%;
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+  #header {
+    height: 100vh;
+  }
+  .biopic {
+    width: 175px;
+    height: 175px;
+  }
+  #name {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  .welcome-message {
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 30px;
+    color: #f3f3f3;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 750px) {
+  #skills-h3, .biopic {
+    display: block;
+  }
+}
