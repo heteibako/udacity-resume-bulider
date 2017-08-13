@@ -54,6 +54,7 @@ function displayBio() {
   formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
   formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
   formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
+  formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
 
   for (i in formattedContactInfo) {
     $("#topContacts").append(formattedContactInfo[i]);
