@@ -107,7 +107,6 @@ a {
 #topContacts {
   order: 0;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .welcome-message {
@@ -131,7 +130,7 @@ a {
 
 #skills {
   order: 4;
-  width: 35%;
+  width: 100%;
   text-align: center;
 }
 
@@ -298,6 +297,8 @@ a {
 .flex-box {
   display: -webkit-flex;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
 }
@@ -343,9 +344,6 @@ span {
 @media only screen and (max-width: 480px) {
   #lets-connect {
     margin-top: 0;
-  }
-  #topContacts {
-    display: block;
   }
   #header {
     height: 100vh;
@@ -413,10 +411,6 @@ span {
   .education-entry {
     max-width: 80%;
     margin-left: 5px;
-  }
-
-  #skills {
-    display: none;
   }
 }
 
