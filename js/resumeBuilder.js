@@ -38,12 +38,9 @@ function displayBio() {
   if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
     for (var i = 0; i < bio.skills.length; i++) {
-      var formattedSkills = HTMLskills.replace('%data%', bio.skills);
-
+      var formattedSkills = HTMLskills.replace('%data%', bio.skills[i]);
+        $("#skills").append(formattedSkills);
     }
-
-    $("#skills").append(formattedSkills);
-
   }
 
   var formattedContactInfo = [];
@@ -228,8 +225,6 @@ function displayEducations() {
         formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.onlineCourses[i].image);
 
         $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool).append(formattedOnlineDates).append(formattedOnlineUrl).append(formattedOnlineImage);
-
-
       }
     }
   }
