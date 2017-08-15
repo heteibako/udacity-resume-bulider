@@ -47,8 +47,6 @@ var HTMLprojectImage = '<img src="%data%">';
 
 
 var HTMLschoolStart = '<div class="education"></div>';
-var HTMLschoolStartOnline = '<div class="education-online"></div>';
-var HTMLschoolContainerOnline = '<div class="education-entry"></div>';
 var HTMLschoolContainer = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#" class="education-title">%data%';
 var HTMLschoolDegree = ' -%data%</a>';

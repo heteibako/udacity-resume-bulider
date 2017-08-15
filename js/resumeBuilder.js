@@ -165,25 +165,33 @@ var educations = {
       school: "Treehouse",
       dates: "2015-2017",
       url: "http://teamtreehouse.com/szabolcsheteibako2",
-      image: "images/treehouse-logo.png"
+      image: "images/treehouse-logo.jpg"
     }, {
-      title: "Frontend development",
+      title: "Essentials in JavaScript ES6",
+      school: "Udemy",
+      dates: "2016-2017",
+      url: "https://www.udemy.com/certificate/UC-6AA9OXEI/",
+      image: "images/udemy.jpg"
+    }, {
+      title: "Web Design for Web Developers",
       school: "Udemy",
       dates: "2015-2017",
-      url: "teamtreehouse.com/szabolcsheteibako2",
+      url: "https://www.udemy.com/certificate/UC-LF4VD55C/",
       image: "images/udemy.jpg"
-    }, {
-      title: "Frontend development",
-      school: "Treehouse",
+    },
+      {
+      title: "The Complete JavaScript Course",
+      school: "Udemy",
       dates: "2015-2017",
-      url: "teamtreehouse.com/szabolcsheteibako2",
+      url: "https://www.udemy.com/certificate/UC-JHF66OYQ/",
       image: "images/udemy.jpg"
-    }, {
+      },
+      {
       title: "Frontend Nanodegree",
       school: "Udacity",
       dates: "2015-2017",
-      url: "teamtreehouse.com/szabolcsheteibako2",
-      image: "images/udacity.png"
+      url: "https://profiles.udacity.com/p/8351743412",
+      image: "images/udacity-blue.jpg"
     }
 
   ]
@@ -191,12 +199,14 @@ var educations = {
 };
 
 function displayEducations() {
+
   if (educations.schools.length > 0) {
-    $("#education").append(HTMLschoolStart).append(HTMLonlineClasses).append(HTMLschoolStartOnline);
+      $("#education").append(HTMLschoolStart);
+
     for (var i = 0; i < educations.schools.length; i++) {
 
-      $(".education").append(HTMLschoolContainer);
 
+        $(".education").append(HTMLschoolContainer);
       var formattedSchoolName = HTMLschoolName.replace('%data%', educations.schools[i].name);
       var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', educations.schools[i].location);
       var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', educations.schools[i].degree);
@@ -204,16 +214,18 @@ function displayEducations() {
       var formattedSchoolDates = HTMLschoolDates.replace('%data%', educations.schools[i].dates);
       var formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.schools[i].image);
 
+
+
       $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree).append(formattedSchoolLocation).append(formattedMajor).append(formattedSchoolDates).append(formattedOnlineImage);
 
     }
 
     if (educations.onlineCourses.length > 0) {
-      // $("#education").append(HTMLonlineClasses).append(HTMLschoolStartOnline);
+
+        $(".education").append(HTMLonlineClasses);
 
       for (i = 0; i < educations.onlineCourses.length; i++) {
-
-        $(".education-online").append(HTMLschoolContainerOnline);
+          $(".education").append(HTMLschoolContainer);
 
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", educations.onlineCourses[i].title).replace("#", educations.onlineCourses[i].url);
         var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', educations.onlineCourses[i].school);

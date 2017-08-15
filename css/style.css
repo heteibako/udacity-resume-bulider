@@ -1,7 +1,7 @@
 /* ----------------- B A S E   S T Y L E S ----------------- */
 
 body, div, ul, li, p, h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 h1 {
@@ -68,7 +68,7 @@ a {
 }
 
 .gray {
-  background-color: #F9F9F9;
+  background-color: #f8f8f8;
 }
 
 .dark-gray {
@@ -223,27 +223,31 @@ a {
 /* ----------------- E D U C A T I O N ----------------- */
 
 #education {
-  display: flex;
-  padding: 50px 0;
+    display: flex;
+    padding: 50px 0;
+    /*background-color: white;*/
+
+    justify-content: flex-start;
 }
 
 .education {
-  display: flex-column;
-  justify-content: center;
-  padding: 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+
 }
 
 .education-entry {
   padding: 20px 30px;
-  flex: 1;
   background-color: white;
-  border-right: solid 1px #1199c3;
+  border-right: solid 3px #1199c3;
   border-left: solid 3px #1199c3;
-  border-radius: 10px 0 0 10px;
-  margin: 20px 0;
+  border-radius: 10px;
+  margin: 20px 20px;
   position: relative;
   height: 71px;
   transition: .3s;
+    width:350px;
 }
 
 .education-entry:hover {
@@ -261,12 +265,13 @@ a {
 }
 
 .onlineSchoolLogo {
-  width: 111px;
-  height: 111px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  right: -112px;
-  top: 0;
+  right:5px;
+  top: 5px;
   transition: .3s;
+    border-radius: 50px;
 }
 
 .education-entry a {
@@ -341,18 +346,16 @@ span {
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 400px) {
   #lets-connect {
     margin-top: 0;
   }
   #header {
     height: 100vh;
+      text-align: center;
   }
   .biopic {
-    width: 175px;
-    height: 175px;
-    display: block;
-    margin-top: 40px;
+      display: none;
   }
   #name {
     color: white;
@@ -398,23 +401,51 @@ span {
   #education {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+
+    padding: 50px 0;
   }
   .education {
     display: block;
     padding: 0;
+    margin:0 auto;
     max-width: 100%;
+    width:95%;
   }
-  .onlineSchoolLogo {
-    display: none;
-  }
+
   .education-entry {
-    max-width: 80%;
-    margin-left: 5px;
+      width:80%;
+      margin: 20px auto;
+
   }
 }
 
 @media only screen and (max-width: 1024px) {
+    #projects {
+        display: block;
+        padding: 30px 0;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .project-entry {
+        margin: 30px 0;
+        max-width: 95%;
+        background-color: white;
+    }
+
+    #workExperience {
+        display: block;
+        padding: 50px 0;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .work-entry {
+        max-width: 100%;
+        padding: 10px 10px;
+        text-align: justify;
+        margin:30px;
+    }
+
   #lets-connect {
     margin-top: 5%;
   }
@@ -448,6 +479,8 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
+
+
   #lets-connect {
     margin-top: 10%;
   }
