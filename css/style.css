@@ -130,9 +130,10 @@ a {
 
 #skills {
   order: 4;
-  width: 100%;
+  width: 500px;
   text-align: center;
   display: flex;
+  margin:0 auto;
 }
 
 
@@ -348,6 +349,11 @@ span {
 @media only screen and (max-width: 400px) {
   #lets-connect {
     margin-top: 0;
+  }
+
+  #skills{
+    width:300px;
+    display: block;
   }
   #header {
     height: 100vh;

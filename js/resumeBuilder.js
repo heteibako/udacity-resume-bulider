@@ -49,11 +49,10 @@ function displayBio() {
   formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
   formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
-  for (i in formattedContactInfo) {
+  for (var i = 0; i <  formattedContactInfo.length; i++) {
     $("#topContacts").append(formattedContactInfo[i]);
     $("#footerContacts").append(formattedContactInfo[i]);
   }
-
 }
 
 displayBio();
@@ -223,7 +222,6 @@ function displayEducations() {
         var formattedOnlineDates = HTMLonlineDates.replace('%data%', educations.onlineCourses[i].dates);
         var formattedOnlineUrl = HTMLonlineURL.replace('%data%', educations.onlineCourses[i].url).replace("#", educations.onlineCourses[i].url);
         formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.onlineCourses[i].image);
-
         $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool).append(formattedOnlineDates).append(formattedOnlineUrl).append(formattedOnlineImage);
       }
     }

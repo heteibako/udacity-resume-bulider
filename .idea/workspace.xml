@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cf0b76a-abbd-4931-b2ea-2fa4cd9f7bc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resumeBuilder.js" afterPath="$PROJECT_DIR$/js/resumeBuilder.js" />
     </list>
@@ -43,11 +42,11 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+            <state relative-caret-position="4604">
+              <caret line="353" column="10" lean-forward="true" selection-start-line="353" selection-start-column="10" selection-end-line="353" selection-end-column="10" />
               <folding>
-                <marker date="1502793063000" expanded="true" signature="3412:3416" ph="{...}" />
-                <marker date="1502793063000" expanded="true" signature="7240:7338" ph="{...}" />
+                <marker date="1502793615000" expanded="true" signature="3430:3434" ph="{...}" />
+                <marker date="1502793615000" expanded="true" signature="7311:7409" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -57,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/js/resumeBuilder.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="227" column="7" lean-forward="true" selection-start-line="227" selection-start-column="7" selection-end-line="227" selection-end-column="7" />
+              <caret line="224" column="8" lean-forward="false" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="173" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -159,12 +158,12 @@
       <option name="presentableId" value="Default" />
       <updated>1502780908051</updated>
       <workItem from="1502780909256" duration="8579000" />
-      <workItem from="1502792830395" duration="611000" />
+      <workItem from="1502792830395" duration="1028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9190000" />
+    <option name="totallyTimeSpent" value="9607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="538" y="23" width="902" height="827" extended-state="0" />
@@ -212,8 +211,8 @@
         <state relative-caret-position="4455">
           <caret line="297" column="3" lean-forward="false" selection-start-line="297" selection-start-column="3" selection-end-line="297" selection-end-column="3" />
           <folding>
-            <marker date="1502793063000" expanded="true" signature="3412:3416" ph="{...}" />
-            <marker date="1502793063000" expanded="true" signature="7240:7338" ph="{...}" />
+            <marker date="1502793615000" expanded="true" signature="3430:3434" ph="{...}" />
+            <marker date="1502793615000" expanded="true" signature="7311:7409" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -258,11 +257,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+        <state relative-caret-position="4604">
+          <caret line="353" column="10" lean-forward="true" selection-start-line="353" selection-start-column="10" selection-end-line="353" selection-end-column="10" />
           <folding>
-            <marker date="1502793063000" expanded="true" signature="3412:3416" ph="{...}" />
-            <marker date="1502793063000" expanded="true" signature="7240:7338" ph="{...}" />
+            <marker date="1502793615000" expanded="true" signature="3430:3434" ph="{...}" />
+            <marker date="1502793615000" expanded="true" signature="7311:7409" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -270,7 +269,7 @@
     <entry file="file://$PROJECT_DIR$/js/resumeBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="227" column="7" lean-forward="true" selection-start-line="227" selection-start-column="7" selection-end-line="227" selection-end-column="7" />
+          <caret line="224" column="8" lean-forward="false" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="173" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
