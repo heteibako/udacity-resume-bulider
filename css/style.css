@@ -223,18 +223,16 @@ a {
 /* ----------------- E D U C A T I O N ----------------- */
 
 #education {
-    display: flex;
-    padding: 50px 0;
-    /*background-color: white;*/
-
-    justify-content: flex-start;
+  display: flex;
+  padding: 50px 0;
+  /*background-color: white;*/
+  justify-content: flex-start;
 }
 
 .education {
-    display: flex;
-    flex-wrap: wrap;
-    margin:0 auto;
-
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .education-entry {
@@ -247,7 +245,7 @@ a {
   position: relative;
   height: 71px;
   transition: .3s;
-    width:350px;
+  width: 350px;
 }
 
 .education-entry:hover {
@@ -268,10 +266,10 @@ a {
   width: 30px;
   height: 30px;
   position: absolute;
-  right:5px;
+  right: 5px;
   top: 5px;
   transition: .3s;
-    border-radius: 50px;
+  border-radius: 50px;
 }
 
 .education-entry a {
@@ -352,10 +350,10 @@ span {
   }
   #header {
     height: 100vh;
-      text-align: center;
+    text-align: center;
   }
   .biopic {
-      display: none;
+    display: none;
   }
   #name {
     color: white;
@@ -401,51 +399,45 @@ span {
   #education {
     display: block;
     margin: 0 auto;
-
     padding: 50px 0;
   }
   .education {
     display: block;
     padding: 0;
-    margin:0 auto;
+    margin: 0 auto;
     max-width: 100%;
-    width:95%;
+    width: 95%;
   }
-
   .education-entry {
-      width:80%;
-      margin: 20px auto;
-
+    width: 80%;
+    margin: 20px auto;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-    #projects {
-        display: block;
-        padding: 30px 0;
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    .project-entry {
-        margin: 30px 0;
-        max-width: 95%;
-        background-color: white;
-    }
-
-    #workExperience {
-        display: block;
-        padding: 50px 0;
-        margin: 0 auto;
-        max-width: 100%;
-    }
-    .work-entry {
-        max-width: 100%;
-        padding: 10px 10px;
-        text-align: justify;
-        margin:30px;
-    }
-
+  #projects {
+    display: block;
+    padding: 30px 0;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .project-entry {
+    margin: 30px 0;
+    max-width: 95%;
+    background-color: white;
+  }
+  #workExperience {
+    display: block;
+    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .work-entry {
+    max-width: 100%;
+    padding: 10px 10px;
+    text-align: justify;
+    margin: 30px;
+  }
   #lets-connect {
     margin-top: 5%;
   }
@@ -479,8 +471,6 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-
-
   #lets-connect {
     margin-top: 10%;
   }

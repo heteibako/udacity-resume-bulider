@@ -62,27 +62,25 @@ function displayBio() {
 displayBio();
 
 var work = {
-  jobs: [
-    {
-      employer: "Budapest Summer Festival",
-      title: "Web developer, graphic designer",
-      location: "Budapest",
-      dates: "May, 2007 - May, 2009",
-      description: "I was responsible for maintaining the company's website." + "Meeting with new clients and building online ad platforms for their needs from scratch to production." + "I was working as a photographer as well due to my previous photography studies." + "I was involved as a graphic designer in a bigger campaign for Paolita swimwear company."
-    }, {
-      employer: "Dewar Studios",
-      title: "Web developer, graphic designer",
-      location: "London",
-      dates: "May, 2011 - August, 2012",
-      description: "I was responsible for creating the online, printed and television advertisements designing, coding and maintaining microsites for various performances of the festival." + "I was in contact with the printshops and the tv stations sending brochure, poster designs and animated video ads on a daily basis." + "I had a lot of freedom in the creative process."
-    }, {
-      employer: "Self employed",
-      title: "Web developer, graphic designer",
-      location: "Budapest",
-      dates: "May, 2013 - ongoing",
-      description: "Building websites for clients from Germany, Hungary and the USA"
-    }
-  ]
+  jobs: [{
+    employer: "Budapest Summer Festival",
+    title: "Web developer, graphic designer",
+    location: "Budapest",
+    dates: "May, 2007 - May, 2009",
+    description: "I was responsible for maintaining the company's website." + "Meeting with new clients and building online ad platforms for their needs from scratch to production." + "I was working as a photographer as well due to my previous photography studies." + "I was involved as a graphic designer in a bigger campaign for Paolita swimwear company."
+  }, {
+    employer: "Dewar Studios",
+    title: "Web developer, graphic designer",
+    location: "London",
+    dates: "May, 2011 - August, 2012",
+    description: "I was responsible for creating the online, printed and television advertisements designing, coding and maintaining microsites for various performances of the festival." + "I was in contact with the printshops and the tv stations sending brochure, poster designs and animated video ads on a daily basis." + "I had a lot of freedom in the creative process."
+  }, {
+    employer: "Self employed",
+    title: "Web developer, graphic designer",
+    location: "Budapest",
+    dates: "May, 2013 - ongoing",
+    description: "Building websites for clients from Germany, Hungary and the USA"
+  }]
 };
 
 function displayWork() {
@@ -107,26 +105,24 @@ function displayWork() {
 displayWork();
 
 var projects = {
-  projects: [
-    {
-      title: "Johanna Zett",
-      dates: "2015",
-      description: "Johanna Zett was born in 1990 in Leipzig, already came in touch with the Musical genre at the age of 11." + "At the Steintor Varieté in Halle (Saale) she learned her first skills in tapdance and modern jazzdance, singing and acting." + "Besides she received piano and opera vocal lessons.",
-      images: "images/johannazett.jpg"
-    }, {
-      title: "Nivot Production",
-      dates: "2016",
-      description: "The purpose of our production office is to provide high quality, unique programs to our partners and viewers with the widest spectrum of culture." + "Among other things, our mission is to connect the motherland with the Hungarians across the border, including continental distances.",
-      images: "images/nivot_open.jpg"
-    }, {
-      title: "Emocean Yoga",
-      dates: "2015",
-      description: "SUP (stand up paddle board) began its journey in Hawaii and spread all over the world." +
+  projects: [{
+    title: "Johanna Zett",
+    dates: "2015",
+    description: "Johanna Zett was born in 1990 in Leipzig, already came in touch with the Musical genre at the age of 11." + "At the Steintor Varieté in Halle (Saale) she learned her first skills in tapdance and modern jazzdance, singing and acting." + "Besides she received piano and opera vocal lessons.",
+    images: "images/johannazett.jpg"
+  }, {
+    title: "Nivot Production",
+    dates: "2016",
+    description: "The purpose of our production office is to provide high quality, unique programs to our partners and viewers with the widest spectrum of culture." + "Among other things, our mission is to connect the motherland with the Hungarians across the border, including continental distances.",
+    images: "images/nivot_open.jpg"
+  }, {
+    title: "Emocean Yoga",
+    dates: "2015",
+    description: "SUP (stand up paddle board) began its journey in Hawaii and spread all over the world." +
       "During the past two years, it has also become popular in Hungary." +
       "Yoga is an ancient Indian method, which can help us to keep our bodies in good condition, functioning in the right way and helping to prevent disease.",
-      images: "images/emocean_yoga.jpg"
-    }
-  ]
+    images: "images/emocean_yoga.jpg"
+  }]
 };
 
 function displayProjects() {
@@ -148,8 +144,7 @@ function displayProjects() {
 displayProjects();
 
 var educations = {
-  schools: [
-    {
+  schools: [{
       name: "Bessenyei College",
       location: "Nyiregyhaza - Hungary",
       degree: " English literature",
@@ -159,8 +154,7 @@ var educations = {
     }
 
   ],
-  onlineCourses: [
-    {
+  onlineCourses: [{
       title: "Frontend development",
       school: "Treehouse",
       dates: "2015-2017",
@@ -179,14 +173,14 @@ var educations = {
       url: "https://www.udemy.com/certificate/UC-LF4VD55C/",
       image: "images/udemy.jpg"
     },
-      {
+    {
       title: "The Complete JavaScript Course",
       school: "Udemy",
       dates: "2015-2017",
       url: "https://www.udemy.com/certificate/UC-JHF66OYQ/",
       image: "images/udemy.jpg"
-      },
-      {
+    },
+    {
       title: "Frontend Nanodegree",
       school: "Udacity",
       dates: "2015-2017",
@@ -201,12 +195,12 @@ var educations = {
 function displayEducations() {
 
   if (educations.schools.length > 0) {
-      $("#education").append(HTMLschoolStart);
+    $("#education").append(HTMLschoolStart);
 
     for (var i = 0; i < educations.schools.length; i++) {
 
 
-        $(".education").append(HTMLschoolContainer);
+      $(".education").append(HTMLschoolContainer);
       var formattedSchoolName = HTMLschoolName.replace('%data%', educations.schools[i].name);
       var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', educations.schools[i].location);
       var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', educations.schools[i].degree);
@@ -222,10 +216,10 @@ function displayEducations() {
 
     if (educations.onlineCourses.length > 0) {
 
-        $(".education").append(HTMLonlineClasses);
+      $(".education").append(HTMLonlineClasses);
 
       for (i = 0; i < educations.onlineCourses.length; i++) {
-          $(".education").append(HTMLschoolContainer);
+        $(".education").append(HTMLschoolContainer);
 
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", educations.onlineCourses[i].title).replace("#", educations.onlineCourses[i].url);
         var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', educations.onlineCourses[i].school);
