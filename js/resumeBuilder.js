@@ -25,21 +25,23 @@ var bio = {
   biopic: "images/szabi.jpg"
 };
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var picture = HTMLbioPic.replace("%data%", bio.biopic);
-var formattedWelcome = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
-
-$("#header").append(formattedName).append(formattedRole).append(picture).append(formattedWelcome);
 
 
-function displayBio() {
+
+bio.display = function() {
+
+  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  var picture = HTMLbioPic.replace("%data%", bio.biopic);
+  var formattedWelcome = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+
+  $("#header").append(formattedName).append(formattedRole).append(picture).append(formattedWelcome);
 
   if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
     for (var i = 0; i < bio.skills.length; i++) {
       var formattedSkills = HTMLskills.replace('%data%', bio.skills[i]);
-        $("#skills").append(formattedSkills);
+      $("#skills").append(formattedSkills);
     }
   }
 
@@ -49,13 +51,13 @@ function displayBio() {
   formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
   formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
-  for (k = 0; k <  formattedContactInfo.length; k++) {
-    $("#topContacts").append(formattedContactInfo[k]);
-    $("#footerContacts").append(formattedContactInfo[k]);
+  for (k = 0; k < formattedContactInfo.length; k++) {
+    $("#topContacts, #footerContacts").append(formattedContactInfo[k]);
   }
-}
+};
 
-displayBio();
+bio.display();
+
 
 var work = {
   jobs: [{
@@ -79,7 +81,7 @@ var work = {
   }]
 };
 
-function displayWork() {
+work.display = function() {
 
   for (var i = 0; i < work.jobs.length; i++) {
     $("#workExperience").append(HTMLworkStart);
@@ -96,55 +98,62 @@ function displayWork() {
 
   }
 
-}
+};
 
-displayWork();
+work.display();
 
 var projects = {
   projects: [{
     title: "Johanna Zett",
     dates: "2015",
     description: "Johanna Zett was born in 1990 in Leipzig, already came in touch with the Musical genre at the age of 11." + "At the Steintor Varieté in Halle (Saale) she learned her first skills in tapdance and modern jazzdance, singing and acting." + "Besides she received piano and opera vocal lessons.",
-    images: "images/johannazett.jpg"
+    images: ["images/johannazett.jpg"]
   }, {
     title: "Nivot Production",
     dates: "2016",
     description: "The purpose of our production office is to provide high quality, unique programs to our partners and viewers with the widest spectrum of culture." + "Among other things, our mission is to connect the motherland with the Hungarians across the border, including continental distances.",
-    images: "images/nivot_open.jpg"
+    images: ["images/nivot_open.jpg"]
   }, {
     title: "Emocean Yoga",
     dates: "2015",
     description: "SUP (stand up paddle board) began its journey in Hawaii and spread all over the world." +
       "During the past two years, it has also become popular in Hungary." +
       "Yoga is an ancient Indian method, which can help us to keep our bodies in good condition, functioning in the right way and helping to prevent disease.",
-    images: "images/emocean_yoga.jpg"
+    images: ["images/emocean_yoga.jpg"]
   }]
 };
 
-function displayProjects() {
+projects.display = function() {
 
   for (var i = 0; i < projects.projects.length; i++) {
     $("#projects").append(HTMLprojectStart);
+
 
     var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projects.projects[i].title);
     var formattedProjectDates = HTMLprojectDates.replace('%data%', projects.projects[i].dates);
     var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects.projects[i].description);
     var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[i].images);
 
+    for (var j = 0; j < projects.projects[i].images.length; j++) {
+      $(".project-entry:last").append(formattedProjectImage);
+    }
 
-    $(".project-entry:last").append(formattedProjectImage).append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription);
+    $(".project-entry:last").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription);
+
 
   }
-}
+};
 
-displayProjects();
+projects.display();
+
+
 
 var educations = {
   schools: [{
       name: "Bessenyei College",
       location: "Nyiregyhaza - Hungary",
       degree: " English literature",
-      majors: "none",
+      majors: ["none"],
       dates: "1998-2000",
       image: "images/besi.jpg"
     }
@@ -188,11 +197,11 @@ var educations = {
 
 };
 
-function displayEducations() {
+educations.display = function() {
 
   if (educations.schools.length > 0) {
     $("#education").append(HTMLschoolStart);
-    var formattedOnlineImage ="";
+    var formattedOnlineImage = "";
 
     for (var i = 0; i < educations.schools.length; i++) {
 
@@ -203,7 +212,7 @@ function displayEducations() {
       var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', educations.schools[i].degree);
       var formattedMajor = HTMLschoolMajor.replace('%data%', educations.schools[i].majors);
       var formattedSchoolDates = HTMLschoolDates.replace('%data%', educations.schools[i].dates);
-       formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.schools[i].image);
+      formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.schools[i].image);
 
 
 
@@ -212,19 +221,21 @@ function displayEducations() {
     }
 
     if (educations.onlineCourses.length > 0) {
-        $(".education").append(HTMLonlineClasses);
+
       for (var j = 0; j < educations.onlineCourses.length; j++) {
         $(".education").append(HTMLschoolContainer);
-          formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.onlineCourses[j].image);
+        formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.onlineCourses[j].image);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", educations.onlineCourses[j].title);
         var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', educations.onlineCourses[j].school);
         var formattedOnlineDates = HTMLonlineDates.replace('%data%', educations.onlineCourses[j].dates);
         var formattedOnlineUrl = HTMLonlineURL.replace('%data%', educations.onlineCourses[j].url).replace("#", educations.onlineCourses[i].url);
 
-        $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool).append(formattedOnlineDates).append(formattedOnlineUrl).append(formattedOnlineImage);
+        $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool).append(formattedOnlineDates).append(formattedOnlineUrl).append(formattedOnlineImage).prepend(HTMLonlineClasses);
       }
     }
   }
-}
+};
 
-displayEducations();
+educations.display();
+
+$("#mapDiv").append(googleMap);

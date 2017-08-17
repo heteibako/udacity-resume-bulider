@@ -34,7 +34,19 @@ h4 {
   line-height: 17px;
 }
 
-h2, h3, h4, h5 {
+h5 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #1894bf;
+  line-height: 12px;
+  margin: 0 0 10px 0;
+  padding: 10px 20px;
+  width: 25%;
+  background-color: rgba(24, 148, 191, 0.09);
+  border-radius: 50px 0 50px 0;
+}
+
+h2, h3, h4 {
   padding: 10px 20px;
 }
 
@@ -84,7 +96,7 @@ a {
 }
 
 #header {
-  background: linear-gradient(135deg, rgba(0, 75, 130, 0.7), rgba(200, 0, 100, 0.7)), url('../images/header2.jpg') no-repeat center bottom fixed;
+  background: linear-gradient(135deg, rgba(43, 53, 64, 1), rgba(43, 53, 64, 0.8)), url('../images/header.jpg') no-repeat center bottom fixed;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -133,7 +145,7 @@ a {
   width: 500px;
   text-align: center;
   display: flex;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 
@@ -234,18 +246,17 @@ a {
 .education {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
 }
 
 .education-entry {
-  padding: 20px 30px;
+  padding: 15px 30px;
   background-color: white;
   border-right: solid 3px #1199c3;
   border-left: solid 3px #1199c3;
   border-radius: 10px;
   margin: 20px 20px;
   position: relative;
-  height: 71px;
+  /*height: 71px;*/
   transition: .3s;
   width: 350px;
 }
@@ -258,6 +269,7 @@ a {
   margin: 0;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 14px;
 }
 
 .online-url {
@@ -274,6 +286,11 @@ a {
   border-radius: 50px;
 }
 
+.online-class {
+  margin: 1px;
+  font-size: 16px;
+}
+
 .education-entry a {
   text-decoration: none;
 }
@@ -283,6 +300,7 @@ a {
   font-size: 14px;
   color: #999;
   line-height: 16px;
+  margin-top: 10px;
 }
 
 .school-date-text {
@@ -291,6 +309,7 @@ a {
 
 .location-text {
   font-style: italic;
+  margin: 3px 0;
   font-size: 14px;
   color: #999;
   line-height: 16px;
@@ -348,11 +367,15 @@ span {
 
 @media only screen and (max-width: 400px) {
   #lets-connect {
-    margin-top: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
   }
-
-  #skills{
-    width:300px;
+  h5 {
+    width: 28%;
+  }
+  #skills {
+    width: 300px;
     display: block;
   }
   #header {
@@ -419,6 +442,11 @@ span {
     width: 80%;
     margin: 20px auto;
   }
+  .date-text {
+    margin-left: 0;
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -479,7 +507,7 @@ span {
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
-    margin-top: 10%;
+    margin-top: 20%;
   }
   .biopic {
     width: 175px;
