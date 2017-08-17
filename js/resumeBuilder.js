@@ -51,7 +51,7 @@ bio.display = function() {
   formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
   formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
-  for (k = 0; k < formattedContactInfo.length; k++) {
+  for (var k = 0; k < formattedContactInfo.length; k++) {
     $("#topContacts, #footerContacts").append(formattedContactInfo[k]);
   }
 };
@@ -140,7 +140,6 @@ projects.display = function() {
 
     $(".project-entry:last").append(formattedProjectTitle).append(formattedProjectDates).append(formattedProjectDescription);
 
-
   }
 };
 
@@ -148,7 +147,7 @@ projects.display();
 
 
 
-var educations = {
+var education = {
   schools: [{
       name: "Bessenyei College",
       location: "Nyiregyhaza - Hungary",
@@ -197,22 +196,22 @@ var educations = {
 
 };
 
-educations.display = function() {
+education.display = function() {
 
-  if (educations.schools.length > 0) {
+  if (education.schools.length > 0) {
     $("#education").append(HTMLschoolStart);
     var formattedOnlineImage = "";
 
-    for (var i = 0; i < educations.schools.length; i++) {
+    for (var i = 0; i < education.schools.length; i++) {
 
 
       $(".education").append(HTMLschoolContainer);
-      var formattedSchoolName = HTMLschoolName.replace('%data%', educations.schools[i].name);
-      var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', educations.schools[i].location);
-      var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', educations.schools[i].degree);
-      var formattedMajor = HTMLschoolMajor.replace('%data%', educations.schools[i].majors);
-      var formattedSchoolDates = HTMLschoolDates.replace('%data%', educations.schools[i].dates);
-      formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.schools[i].image);
+      var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[i].name);
+      var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[i].location);
+      var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[i].degree);
+      var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[i].majors);
+      var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[i].dates);
+      formattedOnlineImage = HTMLonlineImage.replace('%data%', education.schools[i].image);
 
 
 
@@ -220,15 +219,15 @@ educations.display = function() {
 
     }
 
-    if (educations.onlineCourses.length > 0) {
+    if (education.onlineCourses.length > 0) {
 
-      for (var j = 0; j < educations.onlineCourses.length; j++) {
+      for (var j = 0; j < education.onlineCourses.length; j++) {
         $(".education").append(HTMLschoolContainer);
-        formattedOnlineImage = HTMLonlineImage.replace('%data%', educations.onlineCourses[j].image);
-        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", educations.onlineCourses[j].title);
-        var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', educations.onlineCourses[j].school);
-        var formattedOnlineDates = HTMLonlineDates.replace('%data%', educations.onlineCourses[j].dates);
-        var formattedOnlineUrl = HTMLonlineURL.replace('%data%', educations.onlineCourses[j].url).replace("#", educations.onlineCourses[i].url);
+        formattedOnlineImage = HTMLonlineImage.replace('%data%', education.onlineCourses[j].image);
+        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[j].title);
+        var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[j].school);
+        var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[j].dates);
+        var formattedOnlineUrl = HTMLonlineURL.replace('%data%', education.onlineCourses[j].url).replace("#", education.onlineCourses[i].url);
 
         $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool).append(formattedOnlineDates).append(formattedOnlineUrl).append(formattedOnlineImage).prepend(HTMLonlineClasses);
       }
@@ -236,6 +235,6 @@ educations.display = function() {
   }
 };
 
-educations.display();
+education.display();
 
 $("#mapDiv").append(googleMap);
