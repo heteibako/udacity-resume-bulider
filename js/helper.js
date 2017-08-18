@@ -50,6 +50,7 @@ var HTMLschoolStart = '<div class="education"></div>';
 var HTMLschoolContainer = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#" class="education-title">%data%';
 var HTMLschoolDegree = ' -%data%</a>';
+var HTMLschoolURL = '<a href="#" class="online-url">%data%</a>';
 var HTMLschoolDates = '<div class="school-date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em>Major: %data%</em>';

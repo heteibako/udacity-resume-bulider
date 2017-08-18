@@ -154,6 +154,7 @@ var education = {
       degree: " English literature",
       majors: ["none"],
       dates: "1998-2000",
+      url: "http://www.nye.hu/bgytk/",
       image: "images/besi.jpg"
     }
 
@@ -211,11 +212,12 @@ education.display = function() {
       var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[i].degree);
       var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[i].majors);
       var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[i].dates);
+      var formattedSchoolUrl = HTMLschoolURL.replace('%data%', education.schools[i].url);
       formattedOnlineImage = HTMLonlineImage.replace('%data%', education.schools[i].image);
 
 
 
-      $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree).append(formattedSchoolLocation).append(formattedMajor).append(formattedSchoolDates).append(formattedOnlineImage);
+      $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree).append(formattedSchoolLocation).append(formattedMajor).append(formattedSchoolDates).append(formattedSchoolUrl).append(formattedOnlineImage);
 
     }
 
